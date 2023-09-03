@@ -29,10 +29,10 @@ python manage.py migrate
 ```
 python manage.py runserver
 ```
-# Fork 하기
-
 # SRS
+
 # API 문서화
+
 # API 앤드포인트(요청, 응답)
 ## 1. chat
 ```각자 api 나눠서 작성```
@@ -61,7 +61,7 @@ python manage.py runserver
     }
 }
 ```
----
+
 * 회원가입된 이메일 입력시
 ```python
 응답 :
@@ -86,7 +86,7 @@ python manage.py runserver
     "password": "비밀번호"
 }
 ```
----
+
 **응답:**
 ```python
 {
@@ -98,6 +98,7 @@ python manage.py runserver
     "access": "JWT Access 토큰"
 }
 ```
+
 ### 2-3 로그아웃
 ---
 * URL: /user/logout/
@@ -123,13 +124,14 @@ python manage.py runserver
     "email": "친구의 이메일 주소"
 }
 ```
----
+
 **응답:**
 ```python
 {
     "message": "친구 추가 완료 메시지"
 }
 ```
+
 ### 2-5 친구 목록 조회(jwt)
 ---
 * URL: /user/friends/
@@ -142,6 +144,7 @@ python manage.py runserver
     ...  # 친구 목록 정보
 }
 ```
+
 ### 2-6 친구(사용자) 프로필 조회
 ---
 * URL: /user/friend-profile/<int:friend_id>/
@@ -154,6 +157,7 @@ python manage.py runserver
     ...  # 친구의 프로필 정보
 }
 ```
+
 ### 2-7 친구 검색
 ---
 * URL: /user/search-friends/?keyword=[이메일 정보]
@@ -166,13 +170,14 @@ python manage.py runserver
     "keyword": "검색할 키워드(이메일에 포함된 키워드)"
 }
 ```
----
+
 **응답:**
 ```python
 {
     ...  # 검색된 사용자들의 정보
 }
 ```
+
 ### 2-8 친구 삭제
 ---
 * URL: /user/delete-friend/
@@ -185,14 +190,14 @@ python manage.py runserver
     "email": "삭제할 친구의 이메일 주소"
 }
 ```
----
+
 **응답:**
 ```python
 {
     "message": "친구 삭제 완료 메시지"
 }
 ```
----
+
 * 친구목록에 없을 경우
 **응답**
 ```python
